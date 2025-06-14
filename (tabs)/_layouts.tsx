@@ -1,0 +1,55 @@
+import React from "react';
+  import { Tabs } from 'expo-router';
+import Colors from '@/constants/colors';
+import { Home, Plane, Map, Coffee } from 'lucide-react-native';
+
+export default function TabLayout() {
+  return (
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: Colors.light.primary,
+        tabBarInactiveTintColor: Colors.light.inactive,
+        tabBarStyle: {
+          backgroundColor: Colors.light.background,
+          borderTopColor: Colors.light.border,
+        },
+        headerStyle: {
+          backgroundColor: Colors.light.background,
+        },
+        headerTitleStyle: {
+          color: Colors.light.text,
+          fontWeight: 'bold',
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color }) => <Home size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="flights"
+        options={{
+          title: 'Flights',
+          tabBarIcon: ({ color }) => <Plane size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="map"
+        options={{
+          title: 'Map',
+          tabBarIcon: ({ color }) => <Map size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="services"
+        options={{
+          title: 'Services',
+          tabBarIcon: ({ color }) => <Coffee size={24} color={color} />,
+        }}
+      />
+    </Tabs>
+  );
+}
