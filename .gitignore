@@ -1,0 +1,27 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub/
+build/
+ios/Flutter/Flutter.framework
+ios/.symlinks/
+ios/Pods
+macos/Flutter/Flutter.framework
+macos/.symlinks/
+macos/Pods
+
+# Firebase/Android
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+*.iml
+
+# VS Code
+.vscode/
+
+# Others
+*.log
+*.tmp
+*.swp
+.idea
